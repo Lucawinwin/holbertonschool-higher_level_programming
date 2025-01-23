@@ -14,10 +14,3 @@ try:
 except Exception as e:
     print(e)
 
-guillaume@ubuntu:~/$ ./0-main.py
-3
-98
-100
-98
-b must be an integer
-a must be an integer
