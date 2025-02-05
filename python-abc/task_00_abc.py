@@ -7,9 +7,11 @@ def sound(self):
     pass
 
 class Dog(Animal):
+    @abstractmethod
     def sound(self)
     return "Bark"
 
 class Cat(Animal):
+    @abstractmethod
     def sound(self)
     return "Meow"
