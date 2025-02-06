@@ -1,3 +1,4 @@
+#!/usr/bin/env 
 from abc import ABC, abstractmethod
 
 class Animal(ABC)
