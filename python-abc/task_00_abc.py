@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Import the necessary components from the abc module
 """
@@ -15,6 +15,8 @@ class Animal(ABC):
     Abstract class Animal that requires subclasses to implement
     the sound method.
     """
+
+
     @abstractmethod
     def sound(self):
         pass
@@ -25,7 +27,7 @@ class Dog(Animal):
     Dog is a subclass of Animal that implements the sound method.
     """
     def sound(self):
-        return ("Bark")
+        return "Bark"
 
 
 class Cat(Animal):
@@ -33,4 +35,4 @@ class Cat(Animal):
     Cat is a subclass of Animal that implements the sound method.
     """
     def sound(self):
-        return ("Meow")
+        return "Meow"
