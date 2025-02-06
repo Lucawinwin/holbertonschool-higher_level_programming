@@ -1,5 +1,6 @@
 #!/usr/bin/env 
-from abc import ABC, abstractmethod
+from abc import ABC, 
+@abstractmethod
 
 class Animal(ABC)
 def sound(self):
