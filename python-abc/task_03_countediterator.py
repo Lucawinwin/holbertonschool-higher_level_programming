@@ -1,26 +1,39 @@
+#!/usr/bin/env python3
+"""
+This module defines a CountedIterator class that wraps an iterator
+and counts the number of items iterated over.
+"""
+
+
 class CountedIterator:
-    def __init__(self, iterable):
-        self.iterator = iter(iterable)
-        self.count = 0
-    
+    """
+    An iterator that counts the number of items iterated over.
+    """
+    def __init__(self, iterator):
+        """
+        Initialize the CountedIterator with an existing iterator.
+        """
+        self.iterator = iter(iterator)
+        self.counter = 0
+
+    def __iter__(self):
+        """
+        Return the iterator itself.
+        """
+        return self
+
     def __next__(self):
+        """
+        Return the next item from the iterator and increment the count.
+        """
         item = next(self.iterator)
-        self.count += 1
+        if not item:
+            raise StopIteration
+        self.counter += 1
         return item
-    
+
     def get_count(self):
-        return self.count
-
-# Testing the CountedIterator
-my_list = [1, 2, 3, 4, 5]
-counted_iter = CountedIterator(my_list)
-
-# Manual iteration
-print(next(counted_iter))  # 1
-print(next(counted_iter))  # 2
-print(counted_iter.get_count())  # 2
-
-# Loop iteration
-for item in counted_iter:
-    print(item)
-print(counted_iter.get_count())  # 5
+        """
+        Return the number of items iterated over.
+        """
+        return self.counter
