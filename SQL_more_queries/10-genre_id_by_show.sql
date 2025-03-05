@@ -1,5 +1,5 @@
--- Import the database dump from "htbn_0d_tvshows"
-Select tv_shows.title, tv_show_genre.genre.id
-From tv_shows
-Join tv_show_genres On tv_shows.id = tv_show_genres.show_id
-Order by tv_show.title, tv_show_genre.genre_id;
+-- Import the database dump from "hbtn_0d_tvshows"
+SELECT tv_shows.title, tv_show_genres.genre_id -- Query to join cities and states
+FROM tv_shows
+JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
+ORDER BY tv_shows.title, tv_show_genres.genre_id;
