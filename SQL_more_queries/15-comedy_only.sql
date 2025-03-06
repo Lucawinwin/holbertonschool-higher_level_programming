@@ -1,7 +1,7 @@
---Import the database dump from hbtn_0d_tvshows
-Select tv_shows.title
-From tv_shows
-Join tv_show_genres On tv_show_genres.show_id = tv_show.id
-Join tv_genres On tv_genres.id = tv_show_genres.genre_id
-Where tv_genres.name = 'Comedy'
-Order by tv_shows.title
+-- import the database dump from "hbtn_0d_tvshows"
+SELECT tv_shows.title
+FROM tv_shows
+JOIN tv_show_genres ON tv_show_genres.show_id = tv_shows.id
+JOIN tv_genres ON tv_genres.id = tv_show_genres.genre_id
+WHERE tv_genres.name = 'Comedy'
+ORDER BY tv_shows.title
