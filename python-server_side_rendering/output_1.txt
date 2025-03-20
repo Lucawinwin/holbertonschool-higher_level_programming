@@ -1,0 +1,36 @@
+# Example template
+template = """
+Dear {{name}},
+
+You are cordially invited to {{event_title}} on {{event_date}} at {{event_location}}.
+
+We look forward to seeing you there!
+
+Best regards,
+Event Organizers
+"""
+
+# Example attendee data
+attendees = [
+    {
+        "name": "John Smith",
+        "event_title": "Annual Gala",
+        "event_date": "December 15, 2025",
+        "event_location": "Grand Ballroom"
+    },
+    {
+        "name": "Jane Doe",
+        "event_title": "Annual Gala",
+        "event_location": "Grand Ballroom"
+        # Missing event_date
+    },
+    {
+        "name": "Bob Johnson",
+        "event_date": "December 15, 2025",
+        "event_location": "Grand Ballroom"
+        # Missing event_title
+    }
+]
+
+# Generate invitations
+generate_invitations(template, attendees)
