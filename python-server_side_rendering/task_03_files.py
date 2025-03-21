@@ -1,7 +1,7 @@
 import json
 import csv
-import sqlite3
 from flask import Flask, render_template, request
+import sqlite3
 
 app = Flask(__name__)
 
@@ -43,8 +43,6 @@ def products():
         products = read_json()
     elif source == 'csv':
         products = read_csv()
-    elif source == 'sql':
-        products = read_sql()
     else:
         return render_template('product_display.html', error="Wrong source")
 
